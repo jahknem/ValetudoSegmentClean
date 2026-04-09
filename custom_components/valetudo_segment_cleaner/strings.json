@@ -1,0 +1,29 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Valetudo Segment Cleaner",
+        "description": "Configure optional defaults. MQTT topics are autodiscovered.",
+        "data": {
+          "default_vacuum_entity_id": "Default vacuum entity ID (optional)",
+          "default_robot_id": "Default robot ID (optional)"
+        }
+      }
+    },
+    "abort": {
+      "already_configured": "Integration is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Valetudo Segment Cleaner options",
+        "description": "Update optional defaults.",
+        "data": {
+          "default_vacuum_entity_id": "Default vacuum entity ID (optional)",
+          "default_robot_id": "Default robot ID (optional)"
+        }
+      }
+    }
+  }
+}

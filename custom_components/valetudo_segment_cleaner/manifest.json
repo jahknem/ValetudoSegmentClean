@@ -1,6 +1,7 @@
 {
   "domain": "valetudo_segment_cleaner",
   "name": "Valetudo Segment Cleaner",
+  "config_flow": true,
   "documentation": "https://github.com/your-user/valetudo-segment-cleaner",
   "issue_tracker": "https://github.com/your-user/valetudo-segment-cleaner/issues",
   "version": "0.1.0",

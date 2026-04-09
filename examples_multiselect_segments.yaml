@@ -1,0 +1,17 @@
+# Example dashboard card showing auto-generated segment selection switches and clean button.
+# Replace entity IDs with your generated entities from this integration.
+
+type: entities
+title: Valetudo Segment Multi-Select
+entities:
+  - entity: switch.valetudo_kitchen_selected
+  - entity: switch.valetudo_hall_selected
+  - entity: switch.valetudo_wohnzimmer_selected
+  - entity: button.valetudo_clean_selected_segments
+
+# Alternative service call (without using the button entity):
+# action: valetudo_segment_cleaner.clean_selected_segments
+# data:
+#   robot_id: valetudo
+#   execute: true
+#   stop_and_dock_after_start: false
