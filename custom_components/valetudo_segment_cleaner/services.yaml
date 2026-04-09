@@ -1,0 +1,48 @@
+clean_segments_by_name:
+  name: Clean segments by name
+  description: Resolve Valetudo segment names to IDs and publish an MQTT command to Valetudo.
+  fields:
+    vacuum_entity_id:
+      name: Vacuum entity
+      description: Vacuum entity ID.
+      required: true
+      selector:
+        entity:
+          domain: vacuum
+    segment_names:
+      name: Segment names
+      description: One or more segment names as shown by Valetudo.
+      required: true
+      selector:
+        object:
+    robot_id:
+      name: Robot ID
+      description: Optional robot ID. Required only when multiple robots are discovered.
+      required: false
+      selector:
+        text:
+    execute:
+      name: Execute cleaning command
+      description: Keep false while validating. If true, command is sent.
+      required: false
+      default: false
+      selector:
+        boolean:
+    command:
+      name: Vacuum command
+      description: Vacuum command (defaults to app_segment_clean).
+      required: false
+      default: app_segment_clean
+      selector:
+        text:
+    stop_and_dock_after_start:
+      name: Stop and dock immediately after start
+      description: Safety switch for testing to avoid full cleaning runs.
+      required: false
+      default: true
+      selector:
+        boolean:
+
+refresh_segments:
+  name: Refresh segment cache
+  description: Log currently discovered robot IDs and segment cache state.

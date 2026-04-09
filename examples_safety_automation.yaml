@@ -1,0 +1,16 @@
+alias: Vacuum Safety Stop and Dock
+id: vacuum_safety_stop_and_dock
+mode: single
+triggers:
+  - trigger: state
+    entity_id: vacuum.my_robot
+    to: cleaning
+conditions: []
+actions:
+  - action: vacuum.stop
+    target:
+      entity_id: vacuum.my_robot
+  - delay: "00:00:01"
+  - action: vacuum.return_to_base
+    target:
+      entity_id: vacuum.my_robot
